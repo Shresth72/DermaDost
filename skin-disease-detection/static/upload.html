@@ -37,6 +37,7 @@
     </style>
     <!-- main css -->
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="css/uploaded.css" rel="stylesheet" type="text/css" /> -->
     <!-- media queries css -->
     <link href="css/media-queries.css" rel="stylesheet" type="text/css" />
     <!-- html5.js for IE less than 9 -->
@@ -80,23 +81,12 @@
   </head>
 
   <body>
-    <div id="pagewrap" data-nav="home">
-      <header id="header">
-        <div id="header-center">
-          <a id="site-logo" href="static/index.html" title=" Home"></a>
-
-          <nav>
-            <ul id="main-nav">
-              <li><a href="#about" class="nav">About Us</a></li>
-              <li><a href="#how" class="nav">How it Works</a></li>
-              <li><a href="#news" class="nav">News</a></li>
-              <li><a href="#contact" class="nav">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
+    <div id="pagewrap" data-nav="home" class="uploaded-wrap">
+      <header id="uploaded-header">
+        <a href="../static/index.html" class="nav uploaded-nav">Home</a>
       </header>
     </div>
-    <div class="container">
+    <div class="container uploaded-container">
       <center>
         <div class="col-md-6" style="margin-left: 250px">
           <form
@@ -112,13 +102,16 @@
                   <input type="file" id="imgInp" name="file" />
                 </span>
               </span>
-              <label for="form-control">Upload Image</label>
-              <input
-                type="text"
-                class="form-control"
-                readonly
-                id="form-control"
-              />
+              <span id="upload-image" class="">
+                <label for="form-control">Upload Image</label>
+                <input
+                  type="text"
+                  class="form-control "
+                  readonly
+				  placeholder="No file selected"
+                  id="form-control"
+                />
+              </span>
             </div>
             <input
               type="submit"
@@ -131,7 +124,7 @@
       </center>
     </div>
 
-    <footer id="footer">
+    <footer id="footer" class="footer-uploaded">
       &copy; 2019, Inc. All rights reserved
       <div class="panel-inside">
         this web-app is a communication tool that provides initial comparative

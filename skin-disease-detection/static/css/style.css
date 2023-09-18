@@ -468,9 +468,7 @@ PANEL #1
   font-size: 18px;
 }
 
-#sq1.panel1-sq {
-  background-color: #ff4400;
-}
+
 #sq2.panel1-sq {
   background-color: #ff8e00;
   margin-left: 25px;
@@ -1289,4 +1287,48 @@ CLEARFIX
 .clearfix {
   display: block;
   zoom: 1;
+}
+
+/* UPLOADED */
+#uploaded-header {
+  padding: 31px 0 0 31px;
+}
+
+.uploaded-nav {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+}
+
+.input-group {
+  background: #ffffff75;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-group-btn {
+  transform: translateY(13px);
+  
+}
+
+.btn-file {
+  height: 34px;
+  border-radius: 50px;
+}
+
+#upload-image input {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+#upload-image label {
+  transform: translateX(-45px);
+}
+
+.footer-uploaded {
+  transform: translateY(105px);
 }
