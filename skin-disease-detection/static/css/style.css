@@ -468,15 +468,13 @@ PANEL #1
   font-size: 18px;
 }
 
-
 #sq2.panel1-sq {
   background-color: #ff8e00;
-  margin-left: 25px;
 }
+
 #sq3.panel1-sq {
   background-color: #000;
   color: white;
-  margin-left: 25px;
   transition: background-color 0.2s ease-in-out;
 }
 
