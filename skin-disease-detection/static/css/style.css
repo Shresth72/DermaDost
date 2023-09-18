@@ -1025,6 +1025,15 @@ PANEL #7
   width: 450px;
 }
 
+#panel7 a {
+  text-decoration: none;
+  color: white;
+}
+
+#panel7 a:hover {
+  text-decoration: underline;
+}
+
 #panel7 #sq2 input[type="text"] {
   width: 90%;
   padding: 8px;
@@ -1348,4 +1357,14 @@ CLEARFIX
 
 .footer-uploaded {
   transform: translateY(105px);
+}
+
+.uploaded-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uploaded-container {
+  transform: translateX(30px);
 }
