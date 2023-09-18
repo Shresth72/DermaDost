@@ -57,21 +57,19 @@
   </head>
   <body>
     <div id="pagewrap" data-nav="home">
-      <!-- <a id="site-logo" href="index.html" title=" Home"></a> -->
+      <!-- header -->
       <header id="header">
-        <!-- <div id="header-center"> -->
         <nav>
           <ul id="main-nav">
             <li><a href="#about" class="nav">About Us</a></li>
-            <li><a href="#database" class="nav">How it Works</a></li>
+            <li><a href="#how" class="nav">How it Works</a></li>
             <li><a href="#news" class="nav">Updates</a></li>
             <li><a href="#contact" class="nav">Contact</a></li>
           </ul>
           <!-- /#main-nav -->
         </nav>
-        <!-- </div> -->
       </header>
-      <!-- /#header -->
+
       <div id="content">
         <div id="panel1">
           <div id="panel1-inside">
@@ -104,7 +102,6 @@
               </h1>
               <a href="upload.html">
                 <div class="panel1-sq" id="sq3">
-                  <!-- <div class="pic-icon sq-icon"></div> -->
                   <div class="sq-title">Identify</div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +109,6 @@
                     viewBox="0 0 448 512"
                     class="sq-icon2"
                   >
-                    <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                     <path
                       d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
                     />
@@ -128,23 +124,9 @@
             <a class="pic-icon down1 nav" href="#about"></a>
           </div>
         </div>
-        <!-- /#panel1 -->
+
         <div id="rest">
           <div id="panel2" data-nav="about">
-            <!-- <svg class="blur-bg" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feGaussianBlur stdDeviation="40" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g filter="url(#bbblurry-filter)"><ellipse rx="150" ry="150" cx="171.41455422770912" cy="159.0618638243351" fill="hsl(235, 12%, 79%)"></ellipse><ellipse rx="150" ry="150" cx="193.2293243408203" cy="657.6516723632812" fill="hsl(235, 12%, 79%)"></ellipse><ellipse rx="150" ry="150" cx="680.7001803483015" cy="424.47727805282426" fill="hsl(26, 64%, 90%)"></ellipse></g></svg>
-            <svg class="blur-bg blur-bg2" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 640 800"><defs><filter id="bbblurry-filter" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feGaussianBlur stdDeviation="40" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur></filter></defs><g filter="url(#bbblurry-filter)"><ellipse rx="150" ry="150" cx="170.15472991072272" cy="820.4791866963305" fill="hsl(235, 12%, 79%)"></ellipse><ellipse rx="150" ry="150" cx="571.1820903988337" cy="582.0611345411286" fill="hsl(235, 12%, 79%)"></ellipse><ellipse rx="150" ry="150" cx="239.75533392297928" cy="204.0048512210996" fill="hsl(26, 64%, 90%)"></ellipse></g></svg>
-          <h3 class="center-title">About Us</h3>
-          <div class="panel-inside">
-            <div class="panel-inside-inside">
-            <div class="about-sq about-sq1">a</div>
-            <div class="about-sq about-sq2">b</div>
-            <div class="about-sq about-sq3">c</div>
-          </div>
-            <div class="about-sq about-sq4">d</div> -->
-            <!-- <a class="pic-icon down1 nav" href="#database"></a> -->
-
             <h1>About us</h1>
             <p>
               Our goal is to help clinicians make more accurate diagnoses and
@@ -162,10 +144,29 @@
             />
           </div>
 
-          <!-- /#panel3 -->
+          <div id="panel3" data-nav="how">
+            <h1>How It Works</h1>
+            <div class="how-panel">
+              <div class="how-text">
+                <h3>The Algorithm</h3>
+                <p>
+                  The algorithm works a bit like Google's image search, only
+                  ours is specifically designed for skin images. Whereas
+                  Google's image search surveys the whole internet, our
+                  algorithm uses carefully curated medical images.
+                </p>
+              </div>
+              <img
+                id="panel3-sq2"
+                src="../static/images/algorithm.png"
+                class="panel-img"
+                alt="Lubax Alorithm"
+              />
+            </div>
+            </div>
+
           <div id="panel4" data-nav="database">
             <h1 class="center-title">The Database</h1>
-            <!-- <div class="data-panel-inside"> -->
             <img
               id="panel4-sq1"
               src="images/database.png"
@@ -183,25 +184,8 @@
                 skin lesions for clinicians reviewing skin lesions for skin .
               </p>
             </div>
-            <!-- </div> -->
-            <!-- <a class="pic-icon down2 nav" href="#platform"></a> -->
           </div>
-          <!-- /#panel4 
-		<div id="panel5" data-nav="platform">
-			<h3 class="center-title">The Platform</h3>
-			<div class="panel-inside">
-				<div id="panel5-sq1">
-					<div id="sq5-text">
-						A smartphone or tablet is the ideal platform for Lūbax.  The clinician does not need to obtain expensive hardware solutions or worry about expensive per-use charges per patient.  Lūbax is a simple, inexpensive system to identify skin lesions using a smartphone and tablet based platforms.
-					</div>
-				</div>
-				<img id="panel5-sq2" src="images/platforms.png" class="panel-img" alt="Lubax Platform"/>
-				<div class="clearfix"></div>
-			</div>
-			<a class="pic-icon down1 nav" href="#team"></a>
-		</div>
-		 /#panel5 -->
-          <!-- /#panel6 -->
+
           <div id="panel8" data-nav="news">
             <h1 class="center-title">Updates</h1>
 
@@ -237,10 +221,10 @@
                   <p>Working Prototype</p>
                 </div>
               </div>
-              <!-- <a class="pic-icon down2 nav" href="#contact"></a> -->
             </div>
           </div>
-          <!-- /#panel8 -->
+
+          
           <div id="panel7" data-nav="contact">
             <h3 class="center-title">Contact</h3>
             <div class="panel-inside">
@@ -282,10 +266,8 @@
               <a class="pic-icon home nav" href="#home"></a>
             </div>
           </div>
-          <!-- /#panel7 -->
         </div>
       </div>
-      <!-- /#content -->
       <footer id="footer">
         &copy; 2019, Inc. All rights reserved
         <div class="panel-inside">
@@ -296,8 +278,6 @@
           health care provider.
         </div>
       </footer>
-      <!-- /#footer -->
     </div>
-    <!-- /#pagewrap -->
   </body>
 </html>

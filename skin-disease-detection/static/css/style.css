@@ -696,9 +696,59 @@ PANEL #3
 
 #panel3 {
   background-color: transparent;
+  color: #fff;
+  margin-top: 100px;
   z-index: 10;
+  width: 100%;
   position: relative;
-  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 40px;
+  justify-content: flex-start;
+  position: relative;
+  height: 100vh;
+}
+
+#panel3 h1 {
+  font-size: 150px;
+  font-weight: 600;
+  float: left;
+  color: #fff;
+}
+
+#panel3 h3 {
+  font-size: 40px;
+  font-weight: 600;
+  float: left;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.how-panel {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.how-text {
+  display: flex;
+  flex-direction: column;
+}
+
+#panel3 img {
+  width: 480px;
+  height: 400px;
+}
+
+#panel3 p {
+  font-size: 24px;
+  line-height: 160%;
+  float: left;
+  width: 500px;
+  /* margin: 0 0 0 40px; */
+  color: #fff;
+  font-weight: 500;
 }
 
 #panel3 .center-title {
@@ -748,11 +798,9 @@ PANEL #4
 #panel4 {
   background-color: transparent;
   color: #fff;
-  margin-top: 45px;
   z-index: 10;
   width: 100%;
   position: relative;
-  /* padding-bottom: 40px; */
   display: flex;
   flex-direction: column;
   align-items: right;
@@ -1095,8 +1143,8 @@ PANEL #8
   left: 0;
 }
 
-
-.aimodel .update-card, .aimodel .card-bar {
+.aimodel .update-card,
+.aimodel .card-bar {
   background: #bc3ffa;
 }
 
@@ -1108,7 +1156,8 @@ PANEL #8
   background: #a120e1;
 }
 
-.working .update-card, .working .card-bar {
+.working .update-card,
+.working .card-bar {
   background: #fbae17;
 }
 
@@ -1120,7 +1169,8 @@ PANEL #8
   background: rgb(232, 160, 16);
 }
 
-.completed .update-card, .completed .card-bar {
+.completed .update-card,
+.completed .card-bar {
   background: #3fa9f5;
 }
 
@@ -1136,7 +1186,7 @@ PANEL #8
   position: absolute;
   width: 130px;
   background: grey;
-  mix-blend-mode:screen;
+  mix-blend-mode: screen;
   height: 40px;
   z-index: 30;
   opacity: 0.2;
