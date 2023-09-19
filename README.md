@@ -1,6 +1,5 @@
-# DermaDost
-Welcome to the Invoice App repository!
-This mobile application prototype is built using React Native and Expo Go, designed to streamline the process of creating, managing, and sharing invoices for your business or personal use.
+# DermaDost - Skin Condition Detector Web App
+DermaDost is a prototype web application designed to help users identify various skin conditions, provide detailed information about these conditions through articles from the internet, and offer a chatbot feature for discussing skin-related concerns. Additionally, it allows users to capture images through their webcam and analyze them for potential skin conditions.
 
 ##
 
@@ -15,76 +14,66 @@ This mobile application prototype is built using React Native and Expo Go, desig
 
 ## Video Links of our submissions
 ### SIH Project Id: 1344
-### PPT: https://drive.google.com/file/d/1GLP09W_zQjtMywDLts7eaUa3IP0DopXu/view?usp=sharing
-#### Link: https://docs.google.com/presentation/d/1D5xysT-OU6X3faNdOQWFPwg_kD7yw4ZrjJPNRtctB_M/edit?usp=drivesdk
-### Expo details: 
-- Build id: 432e361e-a02d-42cc-882c-b3f99e0c6609
-- Project id: 786a5329-4d39-44b5-b6c6-a18ba07c1d93
-- Name: @shresth72/invoice_app
+#### PPT: https://drive.google.com/file/d/1GLP09W_zQjtMywDLts7eaUa3IP0DopXu/view?usp=sharing
 
 ### Video Presentation of this prototype
-#### Link: https://drive.google.com/file/d/1Du29KBUjt77_HPsZ8gx7kirqAC4cpdyy/view?usp=drivesdk
+#### Video Link: 
 
 <img src="https://github.com/Shresth72/Govt-Billing-Invoice/assets/97455610/ca11dc7f-be1d-44a3-9121-5a1741698096" alt="drawing" width="200"/>
-<img src="https://github.com/Shresth72/Govt-Billing-Invoice/assets/97455610/12752bc5-a3a0-4293-a7f1-a515adfcbb2f" alt="drawing" width="200"/>
-<img src="https://github.com/Shresth72/Govt-Billing-Invoice/assets/97455610/a989a910-8414-469f-a784-c19f7381b2b3" alt="drawing" width="200"/>
 
-## What is an Invoice App?
-An invoice app simplifies the often tedious task of generating invoices for products or services you provide. It's a valuable tool for businesses and freelancers, helping them maintain a professional image while efficiently managing their financial transactions. Here are some key features and functionalities of this Invoice App:
 
-- **Invoice Creation**: You can easily create and customize invoices with details such as your business information, customer details, invoice items, and payment terms.
+# How It Works
+DermaDost combines multiple features to assist users in understanding and managing their skin conditions:
+- **Upload Images:** Users can upload images of their skin concerns. The application then uses machine learning models to identify potential skin conditions in the images.
 
-- **Save and Organize**: The app allows you to save your invoices securely and conveniently. It acts as a digital repository for all your invoices, making it simple to access past records.
+- **Information Articles:** Once a condition is identified, DermaDost provides relevant articles from the internet. These articles offer detailed information about the skin condition, its causes, symptoms, and possible treatments.
 
-- **PDF Generation**: One of the standout features is the ability to convert your invoices into PDF format. This is incredibly useful for sharing invoices with clients, vendors, or for your records. 
+- **Chatbot Support:** One of the standout features is the ability for users to engage with a chatbot to discuss their skin concerns further. The chatbot can provide general advice and answer common questions about skin health.
 
-- **Authentication**: To ensure the security and privacy of your invoices, the app includes user authentication. This means you can control who has access to your invoices and other app features.
+- **Authentication:** To ensure the security and privacy of your invoices, the app includes user authentication. This means you can control who has access to your invoices and other app features.
 
-- **Firebase Integration**: Firebase, a powerful backend-as-a-service platform by Google, is used to store and manage your invoice data. It provides a robust and scalable database solution.
+- **Webcam Capture:** DermaDost also allows users to capture images directly through their webcam. These images can be analyzed for potential skin conditions just like uploaded images.
 
 - **JWT Authentication**: JSON Web Tokens (JWT) are used for secure user authentication. JWTs enable safe transmission of data between the app and the Firebase backend, ensuring that your data remains confidential.
 
 ## Prerequisites
+Prerequisites
+Before you begin, ensure you have met the following requirements:
 
-Before you can run this Invoice App, you need to ensure you have the necessary software installed on your computer. Make sure you have Node.js installed by downloading it from [here](https://nodejs.org/).
+- **Python:** DermaDost is built using Python, so make sure you have Python installed on your system. You can download it from python.org or use a package manager like Anaconda if you prefer.
+
+- **Webcam Access (Optional):** If you want to use the webcam capture feature, ensure that your computer has a webcam, and you have granted permission for the browser to access it.
+
+- **Git (Optional):** To clone the repository and contribute, you'll need Git installed on your system. Download it from git-scm.com.
+
+- **Internet Connection:** DermaDost fetches information articles from the internet, so an active internet connection is required.
 
 ## Installation
+To run DermaDost on your system, follow these steps:
 
-To get started with the Invoice App, you'll need to follow these installation steps:
+1. Download the app's source code by cloning this repository to your local machine using the following command:
 
-1. **Clone the Repository**: Download the app's source code by cloning this repository to your local machine using the following command:
+```bash
+git clone https://github.com/yourusername/DermaDost.git
+cd DermaDost
+```
 
-       ```bash
-       git clone https://github.com/yourusername/invoice-app.git
-
-2. ## Change Directory: Navigate into the project folder with:
-        ```bash
-        cd invoice-app
+2. Install the required packages from requirements.txt using pip:
+ ```bash
+ py -m pip install -r requirements.txt
+ ```
     
-3. ## Install Expo CLI: If you haven't already installed the Expo CLI, you can do so globally using:
-        ```bash
-        npm install -g expo-cli
+3. Run the application:
+ ```bash
+ npm install -g expo-cli
+```
+This will start the application locally. You can access it in your web browser at http://localhost:5000.
 
-4. ## Install Dependencies: Install the project's dependencies:
-        ```bash
-        npm install
-5. ## Set Up Firebase:
-To use Firebase for authentication and database management, you'll need to create a Firebase project and configure it as mentioned in the Configuration section below.
-      ### Configuration
-- Configuring Firebase is an essential step to ensure your app works correctly. Here's how you can set it up:
+## Usage
+- Open your web browser and go to http://localhost:5000.
+- Upload an image of your skin concern or capture one through your webcam.
+- Wait for the application to identify the skin condition.
+- Explore detailed information about the condition and possible treatments through provided articles.
+- Use the chatbot feature to discuss your skin concerns further.
 
-- Create a Firebase Project: Visit the Firebase Console and create a new project.
-
-- Obtain Firebase Configuration: In your Firebase project, navigate to Project Settings and find the Firebase config object.
-
-- Set Up Environment Variables: Create a .env file in the project root and add the Firebase configuration values to it as shown in the example in the Configuration section of this README.
-
-- Replace the placeholder values with the actual values from your Firebase project.
-
-## Starting the App
-- To begin using the Invoice App, execute the following command:
-  
-    ```bash
-    npm install
-
-### Thank you for choosing the Invoice App with React Native and Expo Go. It's designed to make your invoicing process smoother and more efficient, and we hope you find it valuable for your business or personal use. If you have any questions or need assistance, feel free to reach out. Happy invoicing!
+### Enjoy using DermaDost! If you have any questions or encounter any issues, please feel free to create an issue on our GitHub repository.
