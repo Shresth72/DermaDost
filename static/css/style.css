@@ -1439,7 +1439,7 @@ CLEARFIX
   height: 300px;
   border-radius: 12px;
   overflow: hidden;
-  transform: translateY(30px);
+  transform: translateY(20px);
 }
 
 .img-wrap:hover #skin-img {
@@ -1489,4 +1489,14 @@ CLEARFIX
 
 .chatbot-link p {
   color: #00000076;
+}
+
+#chatbot .user {
+  background-color: #589ffb;
+  text-align: right;
+  border-radius: 12px 12px 0px 12px;
+  position: relative;
+  color: white;
+  right: 0;
+  transform: translateX(227%);
 }
