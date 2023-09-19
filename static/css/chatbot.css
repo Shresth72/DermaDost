@@ -140,7 +140,7 @@ h1 {
   position: relative;
 }
 
-.container::before {
+/* .container::before {
     content: "";
     background: url("https://img.freepik.com/premium-vector/seamless-pattern-drawings-doodle-style-cute-robots-simple-illustration-kids_252097-343.jpg");
     background-size: cover;
@@ -153,7 +153,7 @@ h1 {
     top: 68px;
     z-index: 0;
     opacity: 0.26;
-}
+} */
 
 #chatbot p {
   margin: 10px 0;
