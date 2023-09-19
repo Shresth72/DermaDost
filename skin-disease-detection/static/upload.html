@@ -120,6 +120,12 @@
               value="Upload"
             />
           </form>
+          <div class="chatbot-link">
+            <p>Hello there, You can ask me question about your condition</p>
+            <a href="../static/chatbot.html" class="nav uploaded-nav"
+              >Go to Chatbot</a
+            >
+          </div>
         </div>
       </center>
     </div>
@@ -135,5 +141,20 @@
       </div>
     </footer>
     <!-- /#footer -->
+
+    <script>
+      document.getElementById("imgInp").addEventListener("change", function () {
+        const uploadImageDiv = document.getElementById("upload-image");
+        const chatbotLinkDiv = document.querySelector(".chatbot-link");
+
+        if (this.files.length > 0) {
+     // Hide the upload-image div
+          chatbotLinkDiv.style.display = "block"; // Show the chatbot-link div
+        } else {
+           // Show the upload-image div
+          chatbotLinkDiv.style.display = "none"; // Hide the chatbot-link div
+        }
+      });
+    </script>
   </body>
 </html>

@@ -1363,8 +1363,22 @@ CLEARFIX
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .uploaded-container {
   transform: translateX(30px);
 }
+
+.chatbot-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  transform: translateY(30px);
+  display: none;
+}
+
+.chatbot-link p {
+  color: #00000076;
+}
+
