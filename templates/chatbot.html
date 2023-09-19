@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatbot</title>
+    <link rel="icon" type="image/x-icon" href="../static/chatbot.jpeg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #f6e4d6, #e7e0f2);
+        margin: 0;
+        padding: 0;
+      }
+
+      .send-div {
+        display: flex;
+        gap: 10px;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px 4px 20px;
+        box-sizing: border-box;
+        background: #ffffff88;
+        border-radius: 8px;
+        height: 93vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+
+      button {
+        display: block;
+        width: min-content;
+        height: min-content;
+        font-size: 16px;
+        padding: 14px 20px;
+        background-color: #4caf50;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      svg {
+        margin-top: 6px;
+        fill: #323232;
+      }
+
+      button:hover {
+        background-color: #3e8e41;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333333;
+        margin-bottom: 10px;
+      }
+
+      #input {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        height: 26px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        outline: none;
+        margin-bottom: 10px;
+        background: #dddddd58;
+      }
+
+      #chatbot {
+        scrollbar-width: auto;
+        scrollbar-color: #828282 #ffffff;
+        border-radius: 8px;
+      }
+
+      /* Chrome, Edge, and Safari */
+      #chatbot::-webkit-scrollbar {
+        width: 16px;
+      }
+
+      #chatbot::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      #chatbot::-webkit-scrollbar-thumb {
+        background-color: #828282;
+        border-radius: 10px;
+        border: 3px solid #ffffff;
+      }
+
+      #chatbot {
+        background-color: #ffffffd8;
+        border: 1px solid #cccccc;
+        padding: 10px;
+        margin-bottom: 20px;
+        height: 400px;
+        overflow-y: scroll;
+        position: relative;
+      }
+
+      .container::before {
+        content: "";
+        background: url("https://img.freepik.com/premium-vector/seamless-pattern-drawings-doodle-style-cute-robots-simple-illustration-kids_252097-343.jpg");
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        width: 95%;
+        height: 73.4%;
+        border-radius: 8px;
+        left: 20;
+        top: 68px;
+        z-index: 0;
+        opacity: 0.26;
+      }
+
+      #chatbot p {
+        margin: 10px 0;
+        padding: 20px;
+        max-width: 200px;
+      }
+
+      #chatbot .bot {
+        background-color: #ececec;
+        text-align: left;
+        border-radius: 12px 12px 12px 0px;
+        position: relative;
+        left: 65px;
+      }
+
+      #chatbot .bot::before {
+        content: "";
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        left: -65px;
+        background: url("../css/img/boy.png");
+        border-radius: 50%;
+        background-size: cover;
+      }
+
+      #chatbot .user {
+        background-color: #589ffb;
+        text-align: right;
+        border-radius: 12px 12px 0px 12px;
+        position: relative;
+        color: white;
+        /* float: right; */
+        right: 0;
+        transform: translateX(177%);
+      }
+
+      #chatbot .user::before {
+        content: "";
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        right: -64px;
+        bottom: 0;
+        background: url("https://cdn.dribbble.com/users/916023/screenshots/17453788/media/2a7d1d4f5dc3e849aa87573d2d9f5f18.png?resize=840x630&vertical=center");
+        border-radius: 50%;
+        background-size: 260%;
+        background-position: 48% 10%;
+      }
+
+      .nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px 22px;
+        font-size: 16px;
+        text-decoration: none;
+        color: #323232;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1.5em"
+          viewBox="0 0 640 512"
+        >
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M320 0c17.7 0 32 14.3 32 32V96H472c39.8 0 72 32.2 72 72V440c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72H288V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H208zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H304zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H400zM264 256a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224H64V416H48c-26.5 0-48-21.5-48-48V272c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H576V224h16z"
+          />
+        </svg>
+        <h1>Chatbot</h1>
+        <a href="../static/index.html" class="nav uploaded-nav">Home</a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="1.5em"
+          viewBox="0 0 640 512"
+        >
+          <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+          <path
+            d="M320 0c17.7 0 32 14.3 32 32V96H472c39.8 0 72 32.2 72 72V440c0 39.8-32.2 72-72 72H168c-39.8 0-72-32.2-72-72V168c0-39.8 32.2-72 72-72H288V32c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H208zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H304zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16H400zM264 256a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224H64V416H48c-26.5 0-48-21.5-48-48V272c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H576V224h16z"
+          />
+        </svg>
+      </div>
+
+      <div id="chatbot"></div>
+
+      <div class="send-div">
+        <input
+          id="input"
+          type="text"
+          placeholder="Type your message here"
+          onkeypress="if(event.keyCode==13) {getBotResponse()}"
+        />
+        <button type="button" onclick="getBotResponse()">Send</button>
+      </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        appendMessage("Chatbot", "Hi, how can I help you today?");
+      });
+
+      function getBotResponse() {
+        var input = $("#input").val();
+        appendMessage("You", input);
+        $("#input").val("");
+
+        $.get("/get", { msg: input }).done(function (data) {
+          appendMessage("Chatbot", data);
+          speakResponse(data);
+        });
+      }
+
+      function appendMessage(sender, message) {
+        var chatbotDiv = $("#chatbot");
+        var messageClass = sender === "Chatbot" ? "bot" : "user";
+        var messageElement = $("<p></p>")
+          .text(sender + ": " + message)
+          .addClass(messageClass);
+        chatbotDiv.append(messageElement);
+        chatbotDiv.scrollTop(chatbotDiv[0].scrollHeight);
+      }
+
+      function speakResponse(response) {
+        var speech = new SpeechSynthesisUtterance();
+        speech.text = response;
+        speechSynthesis.speak(speech);
+      }
+    </script>
+  </body>
+</html>
