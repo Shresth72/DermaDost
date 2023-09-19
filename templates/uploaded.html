@@ -104,11 +104,13 @@
                 alt="skin_disease_image"
                 id="skin-img"
               />
-              {% comment %} <img
+              {% comment %}
+              <img
                 src="../static/images/boy.png"
                 alt="skin_disease_image"
                 id="skin-img"
-              /> {% endcomment %}
+              />
+              {% endcomment %}
               <div class="predhead-wrap">
                 <h3 class="predhead disease">
                   Disease Predicted:{{predictions}}
@@ -116,8 +118,7 @@
                 <h3 class="predhead accuracy">Accuracy:{{acc}}</h3>
               </div>
             </div>
-            <div class="chatbot-wrapper-uploaded">
-            </div>
+            <div class="chatbot-wrapper-uploaded"></div>
           </div>
         </div>
         <!-- <iframe
@@ -130,7 +131,7 @@
     <script src="jquery.js"></script>
     <script>
       $(function () {
-        $("#includedContent").load("../static/chatbot.html");
+        $("#includedContent").load("../templates/chatbot.html");
       });
     </script>
   </body>
