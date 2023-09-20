@@ -19,6 +19,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-family: "Poppins";
       }
       a {
         font-family: "Poppins";
@@ -43,6 +44,12 @@
     <!-- main css -->
     <link href="../static/css/style.css" rel="stylesheet" type="text/css" />
     <!-- media queries css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="static/css/media-queries.css"
       rel="stylesheet"
@@ -85,6 +92,10 @@
       );
       ga("create", "UA-48354920-1", "lubax.com");
       ga("send", "pageview");
+
+      $(function () {
+        $("#includedContent").load("../templates/chatbot.html");
+      });
     </script>
   </head>
 
@@ -104,13 +115,7 @@
                 alt="skin_disease_image"
                 id="skin-img"
               />
-              {% comment %}
-              <img
-                src="../static/images/boy.png"
-                alt="skin_disease_image"
-                id="skin-img"
-              />
-              {% endcomment %}
+
               <div class="predhead-wrap">
                 <h3 class="predhead disease">
                   Disease Predicted:{{predictions}}
@@ -121,18 +126,8 @@
             <div class="chatbot-wrapper-uploaded"></div>
           </div>
         </div>
-        <!-- <iframe
-          src="https://www.diseaseinfosearch.org/search?term={{predictions}}"
-          class="disinfo"
-        ></iframe> -->
       </center>
     </div>
     <div id="includedContent"></div>
-    <script src="jquery.js"></script>
-    <script>
-      $(function () {
-        $("#includedContent").load("../templates/chatbot.html");
-      });
-    </script>
   </body>
 </html>

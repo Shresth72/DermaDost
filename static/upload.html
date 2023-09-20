@@ -6,6 +6,7 @@
     <style>
       .container {
         margin-top: 150px;
+        font-family: "Poppins";
       }
       .btn-file {
         position: relative;
@@ -46,6 +47,12 @@
       rel="stylesheet"
       id="bootstrap-css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="js/upload.js"></script>
@@ -83,7 +90,7 @@
   <body>
     <div id="pagewrap" data-nav="home" class="uploaded-wrap">
       <header id="uploaded-header">
-        <a href="../static/index.html" class="nav uploaded-nav">Home</a>
+        <a href="../static/index.html" class="nav uploaded-derma">DermaDost</a>
       </header>
     </div>
     <div class="container uploaded-container">
@@ -130,28 +137,16 @@
       </center>
     </div>
 
-    <footer id="footer" class="footer-uploaded">
-      &copy; 2023, Inc. All rights reserved
-      <div class="panel-inside">
-        This web-app is a communication tool that provides initial comparative
-        information about skin lesions. This information comes from the world's
-        largest dermatology textbook database. Outcome of skin diagnose
-        comparisons is only effective when discussed with a qualified health
-        care provider.
-      </div>
-    </footer>
-    <!-- /#footer -->
-
     <script>
       document.getElementById("imgInp").addEventListener("change", function () {
         const uploadImageDiv = document.getElementById("upload-image");
         const chatbotLinkDiv = document.querySelector(".chatbot-link");
 
         if (this.files.length > 0) {
-     // Hide the upload-image div
+          // Hide the upload-image div
           chatbotLinkDiv.style.display = "block"; // Show the chatbot-link div
         } else {
-           // Show the upload-image div
+          // Show the upload-image div
           chatbotLinkDiv.style.display = "none"; // Hide the chatbot-link div
         }
       });

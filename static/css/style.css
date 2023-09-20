@@ -1476,7 +1476,7 @@ CLEARFIX
 }
 
 .uploaded-container {
-  transform: translateX(30px);
+  transform: translateX(30px) scale(1.2);
 }
 
 .chatbot-link {
