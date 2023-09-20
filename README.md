@@ -16,7 +16,7 @@ DermaDost is a prototype web application designed to help users identify various
 ## Video Links of our submissions
 ### SIH Project Id: 1344
 #### PPT LINKS: 
-##### https://drive.google.com/file/d/1GLP09W_zQjtMywDLts7eaUa3IP0DopXu/view?usp=sharing
+##### https://drive.google.com/file/d/1FaGeMgI2m0IaAEgXnKgmuPFvjToRGy2P/view?usp=drivesdk
 ##### https://docs.google.com/presentation/d/1D5xysT-OU6X3faNdOQWFPwg_kD7yw4ZrjJPNRtctB_M/edit?usp=drivesdk
 
 
