@@ -78,5 +78,6 @@ This will start the application locally. You can access it in your web browser a
 - Explore detailed information about the condition and possible treatments through provided articles.
 - Use the chatbot feature to discuss your skin concerns further.
 ## hosted here 
-skin-disease.yasharya5.repl.co
+[Click here](https://skin-disease.yasharya5.repl.co)
+
 ### Enjoy using DermaDost! If you have any questions or encounter any issues, please feel free to create an issue on our GitHub repository.
