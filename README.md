@@ -67,7 +67,7 @@ cd DermaDost
     
 3. Run the application:
  ```bash
- npm install -g expo-cli
+ python app.py
 ```
 This will start the application locally. You can access it in your web browser at http://localhost:5000.
 
