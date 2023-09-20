@@ -1,7 +1,8 @@
 # DermaDost - Skin Condition Detector Web App
 DermaDost is a prototype web application designed to help users identify various skin conditions, provide detailed information about these conditions through articles from the internet, and offer a chatbot feature for discussing skin-related concerns. Additionally, it allows users to capture images through their webcam and analyze them for potential skin conditions.
 
-##
+## Hosted here: [DermaDost-Skin-Disease](https://skin-disease.yasharya5.repl.co)
+<img src="https://github.com/Shresth72/DermaDost/assets/97455610/0a562c6f-1fd1-4a06-b0d0-d211ae86a0b6" alt="mockup" width="900"/>
 
 #### We are team BACKDOOR INNOVATORS for Smart India Hackathon
 ### Team Members:
@@ -22,7 +23,6 @@ DermaDost is a prototype web application designed to help users identify various
 ### Video Presentation of this prototype
 #### Video Link: https://drive.google.com/file/d/1FTg8-zFosntr5ZhEibUZen9Kpr-XqKt8/view?usp=drivesdk
 
-<img src="https://github.com/Shresth72/DermaDost/assets/97455610/0a562c6f-1fd1-4a06-b0d0-d211ae86a0b6" alt="mockup" width="900"/>
 
 # How It Works
 DermaDost combines multiple features to assist users in understanding and managing their skin conditions:
@@ -77,7 +77,6 @@ This will start the application locally. You can access it in your web browser a
 - Wait for the application to identify the skin condition.
 - Explore detailed information about the condition and possible treatments through provided articles.
 - Use the chatbot feature to discuss your skin concerns further.
-## hosted here 
-[Click here](https://skin-disease.yasharya5.repl.co)
+
 
 ### Enjoy using DermaDost! If you have any questions or encounter any issues, please feel free to create an issue on our GitHub repository.
