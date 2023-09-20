@@ -1,13 +1,11 @@
-from flask import render_template, jsonify, Flask, redirect, url_for, request
+from flask import render_template, Flask, request
 import random
-import os
 import numpy as np
-from keras.applications.mobilenet import MobileNet 
-from keras.preprocessing import image
+
 from tensorflow.keras.applications import EfficientNetB3
 import numpy as np
 from tensorflow.keras.models import model_from_json,load_model
-import keras
+
 from keras import backend as K
 import cv2
 # Chatbot imports
