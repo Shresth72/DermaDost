@@ -16,11 +16,11 @@ DermaDost is a prototype web application designed to help users identify various
 ### SIH Project Id: 1344
 #### PPT: https://drive.google.com/file/d/1GLP09W_zQjtMywDLts7eaUa3IP0DopXu/view?usp=sharing
 
+
 ### Video Presentation of this prototype
-#### Video Link: 
+#### Video Link: https://drive.google.com/file/d/1FTg8-zFosntr5ZhEibUZen9Kpr-XqKt8/view?usp=drivesdk
 
-<img src="https://github.com/Shresth72/Govt-Billing-Invoice/assets/97455610/ca11dc7f-be1d-44a3-9121-5a1741698096" alt="drawing" width="200"/>
-
+<img src="https://github.com/Shresth72/DermaDost/assets/97455610/0a562c6f-1fd1-4a06-b0d0-d211ae86a0b6" alt="mockup" width="900"/>
 
 # How It Works
 DermaDost combines multiple features to assist users in understanding and managing their skin conditions:
