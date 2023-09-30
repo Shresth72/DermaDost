@@ -1,155 +1,322 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <!-- main css -->
+        <link href="../static/css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/media-queries.css" rel="stylesheet" type="text/css" />
+
+        <link
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+        rel="stylesheet"
+        id="bootstrap-css"
+      />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"/>
+  
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="js/upload.js"></script>
+        <script src="prefixfree/1-0-7/prefixfree.dynamic-dom.min.js"></script>
+        <!-- jQuery -->
+        <script src="ajax/libs/jquery/1-10-2/jquery.min.js"></script>
+        <script src="ajax/libs/jqueryui/1-8/jquery-ui.min.js"></script>
+        <script src="js/jsapi.js"></script>
+        <script src="js/main.js"></script>
+  
+        <script>
+          (function (i, s, o, g, r, a, m) {
+            i["GoogleAnalyticsObject"] = r;
+            (i[r] =
+              i[r] ||
+              function () {
+                (i[r].q = i[r].q || []).push(arguments);
+              }),
+              (i[r].l = 1 * new Date());
+            (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+          })(
+            window,
+            document,
+            "script",
+            "//www.google-analytics.com/analytics.js",
+            "ga"
+          );
+          ga("create", "UA-48354920-1", "lubax.com");
+          ga("send", "pageview");
+        </script>
+
     <style>
-      .container {
-        margin-top: 150px;
-        font-family: "Poppins";
-      }
-      .btn-file {
-        position: relative;
-        overflow: hidden;
-      }
-      .btn-file input[type="file"] {
-        position: absolute;
-        top: 0;
-        right: 0;
-        min-width: 100%;
-        min-height: 100%;
-        font-size: 100px;
-        text-align: right;
-        filter: alpha(opacity=0);
-        opacity: 0;
-        outline: none;
-        background: white;
-        cursor: inherit;
-        display: block;
-      }
+        #DermaDost-container {
+            display: flex;
+            align-items: center;
+        }
+    
+        #uploaded-header a {
+            color: #F5EFF4;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 20px;
+            text-decoration: none;
+    
+            background-color: #454545;
+            padding: 5px 11px;
+            transition: backgroud-color 3s;
+        }
+    
+        #uploaded-header :hover {
+            background-color: #fbae17;
+        }
+    
+        #text-container {
+            display: flex;
+            justify-content: center;
+        }
+    
+        #text {
+            max-width: 750px;
+            font-family: "Poppins";
+            font-weight: 900;
+            font-size: 50px;
+            text-align: center;
+    
+            margin: 50px auto;
+    
+            color: #454545;
+        }
+    
+        .container {
+            font-family: "Poppins";
+            margin-top: 50px;
+            /* padding: auto; */
+            padding: 20px;
+    
+            height: auto;
+    
+    
+            border: 2px none #454545;
+            border-radius: 10px;
+            width: 500px;
+    
+    
+    
+            background-color: #F5EFF4;
+            box-shadow: 12px 5px 18px #454545;
+    
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    
+        .upload-box {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+        }
+    
+        .upload-box #drop-area {
+            justify-content: center;
+            align-items: center;
+            width: 360px;
+            height: 200px;
+            border: 2px dashed #bfc5e9;
+            border-radius: 5px;
+            background-color: #e2e1f4;
+    
+        }
+    
+        #drop-area input {
+            display: none;
+        }
+    
+        #img-view {
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            border-radius: 5px;
+            background-position: center;
+            background-size: cover;
+        }
+    
+        #img-view img {
+            width: 80px;
+            margin-left: 38%;
+            margin-top: 5%;
+        }
+    
+        #img-view p {
+            text-align: center;
+        }
+    
+        #img-view p:nth-last-child(1) {
+            font-size: 12px;
+            font-weight: 300;
+            text-align: center;
+        }
+    
+        #submit-btn {
+            width: 100%;
+            text-align: center;
+        }
+    
+        #submit-btn input {
+            color: white;
+            width: 200px;
+            font-weight: 600;
+            font-family: "Poppins";
+            letter-spacing: 5px;
+            background-color: #6831FF;
+            border: none;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            transition: all 300ms ease-out;
+            border-radius: 5px;
+        }
+    
+        #submit-btn input:hover {
+            transform: scale(1.1);
+            background-color: #5CB85C;
+        }
+    
+        .chatbot-link {
+            position: absolute;
+            bottom: 40px;
+            right: 10px;
+            width: 400px;
+            height: 150px;
+            padding: 30px;
+            border-radius: 25px 25px 0px 25px;
+            background-color: #6831FF;
+        }
+    
+        .chatbot-link p {
+            color: white;
+        }
+    
+        .chatbot-link a {
+            color: #fbae17;
+            text-decoration: underline;
+        }
 
-      #img-upload {
-        width: 25%;
-        display: block;
-      }
-      #upload {
-        margin-top: 10px;
-      }
+        /* UPLOADED */
+        #uploaded-header {
+          padding: 20px 44px 0px;
+          width: 100vw;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: fixed;
+          z-index: 20;
+          top: 0;
+        }
     </style>
-    <!-- main css -->
-    <link href="../static/css/style.css" rel="stylesheet" type="text/css" />
-    <!-- <link href="css/uploaded.css" rel="stylesheet" type="text/css" /> -->
-    <!-- media queries css -->
-    <link href="css/media-queries.css" rel="stylesheet" type="text/css" />
-    <!-- html5.js for IE less than 9 -->
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
-      rel="stylesheet"
-      id="bootstrap-css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="js/upload.js"></script>
-    <script src="prefixfree/1-0-7/prefixfree.dynamic-dom.min.js"></script>
-    <!-- jQuery -->
-    <script src="ajax/libs/jquery/1-10-2/jquery.min.js"></script>
-    <script src="ajax/libs/jqueryui/1-8/jquery-ui.min.js"></script>
-    <script src="js/jsapi.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        (i[r] =
-          i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(
-        window,
-        document,
-        "script",
-        "//www.google-analytics.com/analytics.js",
-        "ga"
-      );
-      ga("create", "UA-48354920-1", "lubax.com");
-      ga("send", "pageview");
-    </script>
-  </head>
 
-  <body>
+
+</head>
+<body>
     <div id="pagewrap" data-nav="home" class="uploaded-wrap">
-      <header id="uploaded-header">
-        <a href="../static/index.html" class="nav uploaded-derma">DermaDost</a>
-      </header>
+        <header id="uploaded-header">
+            <a href="../static/index.html" class="nav uploaded-derma">
+                <div id="DermaDost-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                        class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                    </svg>
+                    <div>DermaDost</div>
+                </div>
+            </a>
     </div>
+    
+    </header>
+    </div>
+
+    <div id="text-container">
+        <h1 id="text">Upload an image to identify the disease</h1>
+    </div>    
     <div class="container uploaded-container">
-      <center>
-        <div class="col-md-6" style="margin-left: 250px">
-          <form
+            <form 
             class="form-group"
             action="..\uploaded"
             method="post"
-            enctype="multipart/form-data"
-          >
-            <div class="input-group">
-              <span class="input-group-btn">
-                <span class="btn btn-default btn-file">
-                  <label for="imgInp">Browse…</label>
-                  <input type="file" id="imgInp" name="file" />
-                </span>
-              </span>
-              <span id="upload-image" class="">
-                <label for="form-control">Upload Image</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  readonly
-                  placeholder="No file selected"
-                  id="form-control"
-                />
-              </span>
-            </div>
-            <input
-              type="submit"
-              id="upload"
-              class="btn btn-lg btn-success"
-              value="Upload"
-            />
-          </form>
-          <div class="chatbot-link">
-            <p>Hello there, You can ask me questions about your condition</p>
-            <a href="../static/chatbot.html" class="nav uploaded-nav"
-              >Go to Skin Assistant</a
-            >
-          </div>
-        </div>
-      </center>
+            enctype="multipart/form-data">
+        
+                <div class="upload-box">
+                    <label for="input-file" id="drop-area">
+                        <input type="file" readonly accept="image/*" id="input-file">
+                        <div id="img-view">
+                            <img src="images/uploadIcon.png" alt="upload-icon">
+                            <p>Drag and drop the image or <span style="color:#6831FF; text-decoration: underline;">Browse</span>
+                            </p>
+                            <p>Supported formats: JPEG & PNG </p>
+                        </div>
+                    </label>
+                </div>
+                <div id="submit-btn">
+                    <input type="submit" id="upload" value="upload">
+                </div>
+            </form>
+           
     </div>
+    <div class="chatbot-link">
+        <p>Hello there, You can ask me questions about your condition</p>
+        <a href="../static/chatbot.html" class="nav uploaded-nav"
+          >Go to Skin Assistant</a
+        >
+      </div>
+   
 
+
+
+    <!-- SCRIPT TO DISPLAY THE UPLOADED IMAGE -->
     <script>
-      document.getElementById("imgInp").addEventListener("change", function () {
-        const uploadImageDiv = document.getElementById("upload-image");
-        const chatbotLinkDiv = document.querySelector(".chatbot-link");
+        const dropArea = document.getElementById("drop-area");
+        const inputFile = document.getElementById("input-file");
+        const imgView = document.getElementById("img-view");
 
-        if (this.files.length > 0) {
-          // Hide the upload-image div
-          chatbotLinkDiv.style.display = "block"; // Show the chatbot-link div
-        } else {
-          // Show the upload-image div
-          chatbotLinkDiv.style.display = "none"; // Hide the chatbot-link div
+        inputFile.addEventListener("change", uploadImage);
+        
+        function uploadImage(){
+            let imgLink = URL.createObjectURL(inputFile.files[0]);
+            imgView.style.backgroundImage = `url(${imgLink})`;
+            imgView.textContent = "";
         }
-      });
+
+        dropArea.addEventListener("dragover", function(e){
+            e.preventDefault();
+        });
+        
+        dropArea.addEventListener("drop", function(e){
+            e.preventDefault();
+            inputFile.files = e.dataTransfer.files;
+            uploadImage();
+        });
     </script>
-  </body>
+  
+
+
+      <script>
+        document.getElementById("input-file").addEventListener("change", function () {
+          const uploadImageDiv = document.getElementById("upload-image");
+          const chatbotLinkDiv = document.querySelector(".chatbot-link");
+  
+          if (this.files.length > 0) {
+            // Hide the upload-image div
+            chatbotLinkDiv.style.display = "block"; // Show the chatbot-link div
+          } else {
+            // Show the upload-image div
+            chatbotLinkDiv.style.display = "none"; // Hide the chatbot-link div
+          }
+        });
+      </script>
+</body>
 </html>
