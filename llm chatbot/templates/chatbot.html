@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <link rel="icon" type="image/x-icon" href="static/images/chatbot.jpeg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+                body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #f6e4d6, #e7e0f2);
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        a {
+        
+        font-family: 'Poppins', sans-serif;
+        }
+
+        .send-div {
+        display: flex;
+        gap: 10px;
+        }
+
+        .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 20px 4px 20px;
+        box-sizing: border-box;
+        background: #ffffff88;
+        border-radius: 8px;
+        height: 93vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        }
+
+        /* .container::before {
+        content: "";
+        background: url("https://static.vecteezy.com/system/resources/previews/010/043/402/original/chatbot-robot-seamless-pattern-vector.jpg");
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: -2;
+        opacity: 0.5;
+        }
+
+        .container::after {
+        content: "";
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: -2;
+        mix-blend-mode: soft-light;
+        backdrop-filter: blur(4px);
+        } */
+
+        button {
+        display: block;
+        width: min-content;
+        height: min-content;
+        font-size: 16px;
+        padding: 14px 20px;
+        background-color: #4caf50;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        }
+
+        svg {
+        margin-top: 6px;
+        fill: #323232;
+        }
+
+        button:hover {
+        background-color: #3e8e41;
+        }
+
+        h1 {
+        text-align: center;
+        color: #333333;
+        margin-bottom: 10px;
+        }
+
+        #input {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        height: 26px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        outline: none;
+        margin-bottom: 10px;
+        background: #dddddd58;
+        }
+
+        /* ===== Scrollbar CSS ===== */
+        /* Firefox */
+        #chatbot {
+        scrollbar-width: auto;
+        scrollbar-color: #828282 #ffffff;
+        border-radius: 8px;
+        }
+
+        /* Chrome, Edge, and Safari */
+        #chatbot::-webkit-scrollbar {
+        width: 16px;
+        }
+
+        .nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 25px 22px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #323232;
+        }
+
+        #chatbot::-webkit-scrollbar-track {
+        background: transparent;
+        }
+
+        #chatbot::-webkit-scrollbar-thumb {
+        background-color: #828282;
+        border-radius: 10px;
+        border: 3px solid #ffffff;
+        }
+
+        /* ===== CHATBOT CSS ===== */
+        #chatbot {
+        background-color: #ffffffd8;
+        border: 1px solid #cccccc;
+        padding: 10px;
+        margin-bottom: 20px;
+        height: 400px;
+        overflow-y: scroll;
+        position: relative;
+        }
+
+        /* .container::before {
+            content: "";
+            background: url("https://img.freepik.com/premium-vector/seamless-pattern-drawings-doodle-style-cute-robots-simple-illustration-kids_252097-343.jpg");
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            width: 95%;
+            height: 73.4%;
+            border-radius: 8px;
+            left: 20;
+            top: 68px;
+            z-index: 0;
+            opacity: 0.26;
+        } */
+
+        #chatbot p {
+        margin: 10px 0;
+        padding: 20px;
+        max-width: 200px;
+        }
+
+        #chatbot .bot {
+        background-color: #ececec;
+        text-align: left;
+        border-radius: 12px 12px 12px 0px;
+        position: relative;
+        left: 65px;
+        }
+
+        #chatbot .bot::before {
+        content: "";
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        left: -65px;
+        background: url("static/images/boy.png");
+        border-radius: 50%;
+        background-size: cover;
+        }
+
+        #chatbot .user {
+        background-color: #589ffb;
+        text-align: right;
+        border-radius: 12px 12px 0px 12px;
+        position: relative;
+        color: white;
+        right: 0;
+        transform: translateX(177%);
+        }
+
+        #chatbot .user::before {
+        content: "";
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        right: -64px;
+        bottom: 0;
+        background: url("https://cdn.dribbble.com/users/916023/screenshots/17453788/media/2a7d1d4f5dc3e849aa87573d2d9f5f18.png?resize=840x630&vertical=center");
+        border-radius: 50%;
+        background-size: 260%;
+        background-position: 48% 10%;
+        }
+
+        #mic-button.active {
+            background-color: #ff5733; /* Change the color when active */
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 640 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <!-- ... Your SVG path ... -->
+            </svg>
+            <h1>Assistant</h1>
+            <a href="../static/index.html" class="nav uploaded-nav">Home</a>
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 640 512">
+                <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <!-- ... Your SVG path ... -->
+            </svg>
+        </div>
+    
+        <div id="chatbot"></div>
+    
+        <div class="send-div">
+            <input
+                id="input"
+                type="text"
+                placeholder="Type your message here"
+                onkeypress="if(event.keyCode==13) {getBotResponse()}"
+            />
+            <button type="button" id="send-button">Send</button>
+            <button type="button" id="mic-button">🎙️</button>
+
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        
+        function speakResponse(response) {
+        const synth = window.speechSynthesis;
+        const utterance = new SpeechSynthesisUtterance(response);
+
+        synth.speak(utterance);
+        }
+
+        const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+        recognition.continuous = true; // Continuous recognition
+
+        let isListening = false;
+
+        $("#mic-button").click(function () {
+        if (!isListening) {
+            startListening();
+            $("#mic-button").addClass("active");
+        } else {
+            stopListening();
+            $("#mic-button").removeClass("active");
+        }
+        });
+
+        function startListening() {
+        isListening = true;
+        recognition.start();
+        recognition.onresult = function (event) {
+            const transcript = event.results[0][0].transcript;
+            $("#input").val(transcript);
+        };
+        }
+
+        function stopListening() {
+        isListening = false;
+        recognition.stop();
+        }
+
+
+        $(document).ready(function () {
+            appendMessage("Chatbot", "Hi, how can I help you today?");
+        });
+    
+        function getBotResponse() {
+        var input = $("#input").val();
+        appendMessage("You", input);
+        $.ajax({
+            type: "POST",
+            url: "/ask",
+            contentType: "application/json",
+            data: JSON.stringify({ query: input }),
+            success: function (data) {
+            appendMessage("Chatbot", data.answer);
+            speakResponse(data.answer); // Speak the chatbot's response
+            },
+            error: function (error) {
+            console.error("Error:", error);
+            },
+        });
+        }
+
+    
+        function appendMessage(sender, message) {
+            var chatbotDiv = $("#chatbot");
+            var messageClass = sender === "Chatbot" ? "bot" : "user";
+            var messageElement = $("<p></p>")
+              .text(sender + ": " + message)
+              .addClass(messageClass);
+            chatbotDiv.append(messageElement);
+            chatbotDiv.scrollTop(chatbotDiv[0].scrollHeight);
+        }
+    
+        // Handle user input
+        $("#input").keypress(function (event) {
+        if (event.which == 13) {
+        var input = $("#input").val();
+        $("#input").val("");
+        ask_question2(input); // Pass the input to the function without appending it
+    }
+});
+    
+
+        $("#send-button").click(function () {
+            getBotResponse();
+            $("#input").val("");
+        });
+    </script>
+    </body>
+    </html>
